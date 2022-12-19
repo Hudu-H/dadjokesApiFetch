@@ -1,3 +1,9 @@
+$norm: #fff;
+$bg: hsla(0, 0%, 100%, 0.388);
+$boda: #0099ff62;
+$anim1: #aaa;
+$anim2: #0000005c;
+
 * {
   box-sizing: border-box;
 }
@@ -14,52 +20,68 @@ body {
   margin: 0;
   padding: 20px;
 
-  
-}
+  .container {
+    background-color: $bg;
+    border: 1px solid $boda;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 100%;
+    width: 900px;
 
-.container {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  padding: 50px 20px;
-  text-align: center;
-  max-width: 100%;
-  width: 900px;
+    h3 {
+      margin: 0;
+      opacity: 0.5;
+      letter-spacing: 2px;
+    }
 
- 
-}
+    .joke {
+      font-size: 40px;
+      letter-spacing: 1px;
+      line-height: 40px;
+      margin: 50px auto;
+      max-width: 600px;
+    }
 
-h3 {
-  margin: 0;
-  opacity: 0.3;
-  letter-spacing: 2px;
-}
+    .btn {
+      background: #00b4db; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #0083b0,
+        #00b4db
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #0083b0,
+        #00b4db
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.joke {
-  font-size: 40px;
-  letter-spacing: 1px;
-  line-height: 40px;
-  margin: 50px auto;
-  max-width: 600px;
-}
+      color: $norm;
+      border: 1px solid $boda;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+      padding: 14px 40px;
+      font-size: 16px;
+      cursor: pointer;
 
-.btn {
-  background-color: rgb(117, 1, 225);
-  color: white;
-  border: 0;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-  padding: 14px 40px;
-  font-size: 16px;
-  cursor: pointer;
+      &:active {
+        transform: scale(0.98);
+      }
 
-  
-}
+      &:hover {
+        animation: animation 1s 1 linear;
 
-.btn:active {
-  transform: scale(0.98);
-}
+        @keyframes animation {
+          50% {
+            color: $anim1;
+          }
 
-.btn:focus {
-  outline: 0;
+          100% {
+            color: $anim2;
+          }
+        }
+      }
+    }
+  }
 }
