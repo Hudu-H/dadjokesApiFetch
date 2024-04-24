@@ -3,7 +3,10 @@
 }
 
 body {
-  background-image: url(https://www.gettyimages.es/gi-resources/images/500px/983794168.jpg);
+  background-image: url("/dadjokes.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -46,6 +49,7 @@ body .container .btn {
   padding: 14px 40px;
   font-size: 16px;
   cursor: pointer;
+  outline: none;
 }
 .container .btn:hover {
   background: #0289a7;
